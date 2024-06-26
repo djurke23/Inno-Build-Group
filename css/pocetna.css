@@ -9,7 +9,7 @@
 .header{
 min-height: 100vh;
 width: 100%;
-background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)) ,url(/slike/pozadina1.jpg);
+background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)) ,url('../slike/pozadina1.jpg');
 background-position: center;
 background-size: cover;
 position: relative;
@@ -25,7 +25,7 @@ align-items: center;
 }
 
 nav img{
-width: 150px;
+width: 200px;
 }
 
 .nav-links{
@@ -340,8 +340,7 @@ padding-top: 50px;
 .poziv{
     margin:100px auto;
     width: 80%;
-    background-image:   linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), 
-                        url(slike/poziv.jpeg) ;
+    background-image:   linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../slike/poziv.jpeg') ;
     background-position: center;
     background-size: cover;
     border-radius: 10px;
