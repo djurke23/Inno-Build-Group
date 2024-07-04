@@ -29,6 +29,22 @@
 
 <body>
 
+<!-- info bar -->
+
+<div class="info-bar">
+    <span class="info-item">
+        <i class="fas fa-phone"></i> 065/269-7144
+    </span>
+    <span class="info-item">
+        <i class="fas fa-envelope"></i> innobuildgroup23@gmail.com
+    </span>
+    <span class="info-item">
+        <i class="far fa-clock"></i> Pon - Ned: 08:00 - 22:00
+    </span>
+</div>
+
+
+
     <section class="sub-header">
 
     <nav>
@@ -52,7 +68,7 @@
 
             <li> <a href="index.html">  POČETNA     </a> </li>
             <li> <a href="o_nama.html">  O NAMA      </a> </li>
-            <li> <a href="">  GALERIJA    </a> </li>
+            <li> <a href="galerija.html">  GALERIJA    </a> </li>
             <li> <a href="usluge.html">  USLUGE      </a> </li>
             <li> <a href="blog.html">  BLOG        </a> </li>
             <li> <a href="kontakt.html">  KONTAKT     </a> </li>
@@ -85,65 +101,63 @@
 
 </section>
 
+
+
+
 <!---- Kontakt  -->
-
 <section class="kontakt">
+    <div class="kontakt-container">
+        <div class="kontakt-info">
+            <h2>Kontaktirajte nas</h2>
 
-    <div class="red">
+            <br> <br> 
 
-        <div class="kontakt-kolona">
-
-            <div>
+            <div class="info-item2">
                 <i class="fa-solid fa-home"></i>
-                <span>
-                    <h5> Milovana Djorica 4</h5>
-                <p> Zeleznik, Beograd, Srbija</p>
-            </span>
+                <div>
+                    <h5>Milovana Djorica 4</h5>
+                    <p>Zeleznik, Beograd, Srbija</p>
+                </div>
             </div>
-        
-
-        
-            <div>
+            <div class="info-item2">
                 <i class="fa-solid fa-phone"></i>
-                <span>
-                    <h5> +381652697144</h5>
-                <p> Ponedeljak-Petak, 07h-19h </p>
-            </span>
+                <div>
+                    <h5>065/269-7144</h5>
+                    <p>Ponedeljak-Petak, 07h-19h</p>
+                </div>
             </div>
-        
-
-        
-            <div>
+            <div class="info-item2">
                 <i class="fa-solid fa-envelope"></i>
-                <span>
-                    <h5> innobuildgroup23@gmail.com </h5>
-                <p> Posaljite nam upit na mejl </p>
-            </span>
+                <div>
+                    <h5>innobuildgroup23@gmail.com</h5>
+                    <p>Pošaljite nam upit na mejl</p>
+                </div>
             </div>
-
         </div>
-
-
-
-    <div class="kontakt-kolona">
-
-        <form action="form-handler.php" method="post">
-            <input type="text" name="name" placeholder="Unesite Vase Ime" required>
-            <input type="email" name="email" placeholder="Unesite Vasu E-mail adresu" required>
-            <input type="text" name="subject" placeholder="Unesite Vas Zahtev" required>
-            <textarea rows="8" name="message" placeholder="Poruka" required></textarea>
-            <button type="submit" class="hero-btn crveno-dugme"> Posalji Poruku </button>
-        </form>
-
-
+        <div class="kontakt-form">
+            <h2>Pošaljite nam poruku</h2>
+            <form action="form-handler.php" method="post">
+                <input type="text" name="name" placeholder="Unesite Vaše Ime" required>
+                <input type="email" name="email" placeholder="Unesite Vašu E-mail adresu" required>
+                <input type="text" name="subject" placeholder="Unesite Vaš Zahtev" required>
+                <textarea rows="5" name="message" placeholder="Poruka" required></textarea>
+                <button type="submit" class="hero-btn crveno-dugme">Pošalji Poruku</button>
+            </form>
+        </div>
     </div>
-
-
-
-    </div>
-
 </section>
 
+
+
+
+<!-- scroll to top -->
+
+
+
+<button id="scrollTopBtn" title="Go to top"></button>
+
+
+<!-- loading screen -->
 
 
 
@@ -156,41 +170,68 @@
 
 <!-- Footer -->
 
-<section class="footer">
-
-    <h4> Ostanite povezani </h4>
-    <p> Pratite nas na društvenim mrežama za najnovije trendove u adaptaciji, 
-        inspirativne ideje za uređenje doma i ekskluzivne uvide u naše projekte. 
-        <br>
-        Budite deo naše zajednice i otkrijte kako Inno Build Group transformiše životne prostore širom Srbije. </p>
 
 
-    <div class="ikonice">
+<!-- Footer -->
 
 
-        <a href="https://www.facebook.com/profile.php?id=100009196966184" target="_blank">
-        <i class="fa-brands fa-facebook"></i>
-      </a>
-      <a href="https://www.instagram.com/davidgrbovic/" target="_blank">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/david-grbovic-5b3b75315" target="_blank">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
-      <a href="https://www.tiktok.com/@tvojProfil" target="_blank">
-        <i class="fa-brands fa-tiktok"></i>
-      </a>
-      <a href="https://www.pinterest.com/innobuildgroup23/" target="_blank">
-        <i class="fa-brands fa-pinterest"></i>
-      </a>
-    
-</div>
 
-<p> Napravljeno by DJURA MANIJAK </p>
-
-</section>
-
-
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>O nama</h3>
+            <p>Inno Build Group je vodeća kompanija za adaptaciju stanova u Srbiji,  
+                posvećena stvaranju prostora koji inspirišu i unapređuju kvalitet života.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=100009196966184" class="social-icon">
+                  <img src="slike/ikonice footer/facebook.svg" alt="Facebook">
+                  </a>
+                <a href="https://www.instagram.com/davidgrbovic/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D" class="social-icon">
+                  <img src="slike/ikonice footer/instagram.svg" alt="instagram">
+                </a>
+                <a href="https://www.tiktok.com/@innobuildgroup?is_from_webapp=1&sender_device=pc" class="social-icon">
+                  <img src="slike/ikonice footer/tiktok.svg" alt="Tiktok">
+                </a>
+                <a href="https://www.linkedin.com/in/david-grbovic-5b3b75315" class="social-icon">
+                  <img src="slike/ikonice footer/linkedin.svg" alt="Linkedin">
+                </a>
+                <a href="https://www.pinterest.com/innobuildgroup23/_created/" class="social-icon">
+                  <img src="slike/ikonice footer/pinterest.svg" alt="Pinterest">
+                </a>
+            </div>
+        </div>
+  
+        <div class="footer-section">
+            <h3>Potrebna Vam je Pomoć?</h3>
+            <ul>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="o_nama.html">O nama</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+        </div>
+  
+        <div class="footer-section">
+            <h3>Navigacija</h3>
+            <ul>
+                <li><a href="galerija.html">Galerija</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="usluge.html">Usluge</a></li>
+                
+            </ul>
+        </div>
+  
+        <div class="footer-section">
+          <h3>Kontaktirajte nas</h3>
+          <p>📞 <a href="tel:+381652697144">+381652697144</a></p>
+          <p>✉️ <a href="mailto:innobuildgroup23@gmail.com">innobuildgroup23@gmail.com</a></p>
+      </div>
+      
+    </div>
+    <div class="copyright">
+        Copyright © 2024 Made by Djurke23. All Rights Reserved.
+    </div>
+  </footer>
 
 
 
