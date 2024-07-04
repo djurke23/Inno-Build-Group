@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -17,6 +18,34 @@ position: relative;
 
 
 
+/* info bar */
+
+
+.info-bar {
+    background-color: #f8f8f8;
+    padding: 10px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+.info-bar:hover {
+    background-color: #e8e8e8;
+}
+.info-item {
+    display: inline-block;
+    margin: 0 15px;
+    transition: transform 0.3s ease;
+}
+.info-item:hover {
+    transform: translateY(-2px);
+}
+.info-item i {
+    margin-right: 5px;
+}
+
+
 
 
 /* navigacioni bar */
@@ -29,7 +58,7 @@ align-items: center;
 }
 
 nav img {
-    width: 250px;
+    width: 225px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -348,7 +377,7 @@ transition: transform 0.3s ease; /* Dodavanje prelaza za glatki efekat */
 .poziv{
     margin:100px auto;
     width: 80%;
-    background-image:   linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../slike/poziv.jpeg') ;
+    background-image:   linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/821754/pexels-photo-821754.jpeg?auto=compress&cs=tinysrgb&w=600') ;
     background-position: center;
     background-size: cover;
     border-radius: 10px;
@@ -374,85 +403,6 @@ transition: transform 0.3s ease; /* Dodavanje prelaza za glatki efekat */
 
 
 
-/*footer */
-
-.footer {
-    background-color: #ddc08a;
-    padding: 40px 0;
-    color: #ffffff;
-}
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.footer-section {
-    flex: 1;
-    margin: 0 20px;
-    min-width: 200px;
-}
-.footer-section h3 {
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-.footer-section p, .footer-section ul {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #ffffff;
-}
-.footer-section ul {
-    list-style-type: none;
-    padding: 0;
-}
-.footer-section ul li {
-    margin-bottom: 8px;
-}
-.social-icons {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.social-icon {
-    margin: 0 10px;
-}
-
-.social-icon img {
-    width: 40px; /* Adjust the size as needed */
-    height: 40px; /* Adjust the size as needed */
-    transition: transform 0.3s ease; /* Add a hover effect */
-}
-
-.social-icon img:hover {
-    transform: scale(1.2); /* Enlarge the icon on hover */
-}
-.copyright {
-    text-align: center;
-    padding-top: 20px;
-    margin-top: 40px;
-    border-top: 1px solid #ddd;
-    font-size: 12px;
-}
-@media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-    }
-    .footer-section {
-        margin: 20px 0;
-    }
-}
-
-.footer-section ul li a {
-    color: #ffffff; /* Boja linka */
-    text-decoration: none; /* Bez podvlačenja */
-    transition: color 0.3s; /* Animacija promene boje */
-}
-
-.footer-section ul li a:hover {
-    color: #ffcc00; /* Boja linka pri prelasku miša */
-}
 
 
 
@@ -528,57 +478,190 @@ transition: transform 0.3s ease; /* Dodavanje prelaza za glatki efekat */
 
 
 
-/*---- KONTAKT ---*/
-
-.kontakt{
-    width: 80%;
-    margin: auto;
+/* Kontakt sekcija */
+.kontakt {
+    padding: 50px 0;
+    background-color: #f9f9f9;
 }
 
-.kontakt-kolona{
+.kontakt-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.kontakt-info, .kontakt-form {
     flex-basis: 48%;
+}
+
+.kontakt h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Kontakt informacije */
+.info-item2 {
+    display: flex;
+    align-items: flex-start;
     margin-bottom: 30px;
 }
-.kontakt-kolona div{
-    display: flex;
-    align-items: center;
-    margin-bottom: 40px;
-}
-.kontakt-kolona div .fa-solid{
-    font-size: 28px;
+
+.info-item2 i {
+    font-size: 24px;
     color: #f44336;
-    margin: 10px;
-    margin-right: 30px;
+    margin-right: 20px;
+    margin-top: 5px;
 }
 
-.kontakt-kolona div p{
-    padding:0;
-}
-
-.kontakt-kolona div h5{
-    font-size: 20px;
+.info-item2 h5 {
+    font-size: 18px;
     margin-bottom: 5px;
-    color: #555;
-    font-weight: 400;
+    color: #444;
+}
+
+.info-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Kontakt forma */
+.kontakt-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.kontakt-form input,
+.kontakt-form textarea {
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.kontakt-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.hero-btn.crveno-dugme {
+    background-color: #f44336;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.hero-btn.crveno-dugme:hover {
+    background-color: #d32f2f;
+}
+
+/* Responzivnost */
+@media (max-width: 768px) {
+    .kontakt-container {
+        flex-direction: column;
+    }
+
+    .kontakt-info, .kontakt-form {
+        flex-basis: 100%;
+        margin-bottom: 40px;
+    }
 }
 
 
-.kontakt-kolona input, .kontakt-kolona textarea{
+
+
+/* FAQ */
+
+.container3 {
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    max-width: 1100px;
     width: 100%;
-    padding: 15px;
-    margin-bottom: 17px;
-    outline: none;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin: 0 auto; /* Dodato za centriranje */
+}
+
+.image-container3 {
+    flex: 1;
+    animation: float 3s ease-in-out infinite;
+}
+
+.image-container3 img {
+    max-width: 100%;
+    height: auto;
+}
+
+.faq-container {
+    flex: 1;
+    padding-left: 30px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+.faq-question h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+.arrow.active {
+    transform: rotate(180deg);
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+@media (max-width: 768px) {
+    .container3 {
+        flex-direction: column;
+    }
+    
+    .faq-container {
+        padding-left: 0;
+        margin-top: 20px;
+    }
 }
 
 
 
-
-
-
-
-/*---- FAQ  ---*/
+/*---- 
 
 
 .title{
@@ -649,7 +732,7 @@ transition: transform 0.3s ease; /* Dodavanje prelaza za glatki efekat */
 }
 
 
-
+*/
 
 
 /*---- loading screen  ---*/
@@ -1139,23 +1222,6 @@ p {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* galerija */ 
 
 
@@ -1167,6 +1233,7 @@ p {
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
+
 .banner-content:hover {
     transform: scale(1.05);
 }
@@ -1251,3 +1318,160 @@ p {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
+
+
+
+/* beofre after galerija */ 
+
+
+
+.before-after-slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.before-image,
+.after-image {
+    display: block;
+    width: 100%;
+}
+.after-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+.slider-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: white;
+    cursor: ew-resize;
+}
+.slider-handle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+}
+.slider-handle::after {
+    content: '↔';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+}
+.slider-handle:hover::before {
+    background: #f0f0f0;
+}
+
+
+
+
+
+/* Footer */
+.footer {
+    background-color: #ddc08a;
+    padding: 40px 20px;
+    color: #ffffff;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 20px 20px;
+    min-width: 200px;
+    text-align: center;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-icon {
+    margin: 0 10px;
+}
+
+.social-icon img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.2);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 40px;
+    border-top: 1px solid #ddd;
+    font-size: 12px;
+}
+
+.footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #ffcc00;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+    .footer-section {
+        margin: 20px 0;
+        width: 100%;
+    }
+}
+
