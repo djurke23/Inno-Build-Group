@@ -31,3 +31,63 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+
+
+// before after galerija
+
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.before-after-slider');
+    const beforeImage = slider.querySelector('.before-image');
+    const afterImage = slider.querySelector('.after-image');
+    const sliderHandle = slider.querySelector('.slider-handle');
+
+    let isResizing = false;
+
+    sliderHandle.addEventListener('mousedown', function(e) {
+        e.preventDefault();
+        isResizing = true;
+    });
+
+    document.addEventListener('mousemove', function(e) {
+        if (!isResizing) return;
+        
+        const sliderRect = slider.getBoundingClientRect();
+        const x = e.clientX - sliderRect.left;
+        const percent = (x / sliderRect.width) * 100;
+        
+        if (percent > 0 && percent < 100) {
+            afterImage.style.width = `${percent}%`;
+            sliderHandle.style.left = `${percent}%`;
+        }
+    });
+
+    document.addEventListener('mouseup', function() {
+        isResizing = false;
+    });
+
+    // Touch events for mobile
+    sliderHandle.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+        isResizing = true;
+    });
+
+    document.addEventListener('touchmove', function(e) {
+        if (!isResizing) return;
+        
+        const touch = e.touches[0];
+        const sliderRect = slider.getBoundingClientRect();
+        const x = touch.clientX - sliderRect.left;
+        const percent = (x / sliderRect.width) * 100;
+        
+        if (percent > 0 && percent < 100) {
+            afterImage.style.width = `${percent}%`;
+            sliderHandle.style.left = `${percent}%`;
+        }
+    });
+
+    document.addEventListener('touchend', function() {
+        isResizing = false;
+    });
+});
