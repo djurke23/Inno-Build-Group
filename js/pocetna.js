@@ -3,6 +3,9 @@
 
 
 
+
+
+
 // ikonice za nav bar fon
 
 var navLinks = document.getElementById ("navLinks") ;
@@ -26,20 +29,20 @@ document.getElementById('saznajViseBtn').addEventListener('click', function(even
 
 // faq
 
-const q = document.querySelectorAll('.q');
-const a = document.querySelectorAll('.a');
-const arr = document.querySelectorAll('.arrow');
-
-for(let i = 0; i < q.length; i++) {
-
-    q[i].addEventListener('click', () => {
-
-        a[i].classList.toggle('a-opened');
-        arr[i].classList.toggle('arrow-rotated');
-
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const arrow = question.querySelector('.arrow');
+        
+        if (answer.style.maxHeight) {
+            answer.style.maxHeight = null;
+            arrow.classList.remove('active');
+        } else {
+            answer.style.maxHeight = answer.scrollHeight + "px";
+            arrow.classList.add('active');
+        }
     });
-}
-
+});
 
 
 
@@ -196,33 +199,12 @@ const slider = document.querySelector('.slider');
 
 
 
+        //inf slajder
 
-
-
-        // timeline
-
-
-        function isElementInViewport(el) {
-            const rect = el.getBoundingClientRect();
-            return (
-                rect.top >= 0 &&
-                rect.left >= 0 &&
-                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-            );
-        }
-
-        function showVisibleTimelineItems() {
-            const timelineItems = document.querySelectorAll('.container');
-            timelineItems.forEach(item => {
-                if (isElementInViewport(item)) {
-                    item.classList.add('show');
-                }
-            });
-        }
-
-        // Inicijalno pokretanje za prikaz vidljivih elemenata
-        showVisibleTimelineItems();
-
-        // Dodavanje event listener-a za scrollovanje
-        window.addEventListener('scroll', showVisibleTimelineItems);
+        const track = document.querySelector('.logo-slide-track');
+        
+        track.addEventListener('animationiteration', () => {
+            track.style.animation = 'none';
+            track.offsetHeight; // Trigger reflow
+            track.style.animation = null;
+        });
