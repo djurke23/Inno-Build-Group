@@ -26,13 +26,6 @@ document.getElementById('saznajViseBtn').addEventListener('click', function(even
 
 
 
-// LOADING SCREEN - sve stranice
-
-$(window).on("load",function(){
-    $(".loader-wrapper").fadeOut("slow");
-}); 
-
-
 
 
 
