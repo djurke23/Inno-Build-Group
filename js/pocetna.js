@@ -3,7 +3,7 @@
 
 
 
-
+// X i Bars za nav bar mobilni prikaz
 
 
 const navLinks = document.getElementById("navLinks");
@@ -12,10 +12,14 @@ const closeMenu = document.getElementById("closeMenu");
 
 openMenu.addEventListener("click", () => {
     navLinks.style.right = "0";
+    openMenu.style.display = "none";
+    closeMenu.style.display = "block";
 });
 
 closeMenu.addEventListener("click", () => {
-    navLinks.style.right = "-200px";
+    navLinks.style.right = "-100%";
+    closeMenu.style.display = "none";
+    openMenu.style.display = "block";
 });
 
 
