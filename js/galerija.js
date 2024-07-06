@@ -126,9 +126,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+// galerija nova
 
+const gallery = document.querySelector('.gallery4');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        const itemWidth = gallery.querySelector('.gallery4-item').offsetWidth;
+        let scrollAmount = 0;
 
+        prevBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            scrollAmount -= itemWidth * 4;
+            if (scrollAmount < 0) {
+                scrollAmount = gallery.scrollWidth - gallery.offsetWidth;
+            }
+            gallery.scrollTo({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        });
 
+        nextBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            scrollAmount += itemWidth * 4;
+            if (scrollAmount > gallery.scrollWidth - gallery.offsetWidth) {
+                scrollAmount = 0;
+            }
+            gallery.scrollTo({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        });
 
 
 
