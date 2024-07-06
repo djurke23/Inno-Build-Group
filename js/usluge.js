@@ -1,4 +1,4 @@
-// STRELICA SCROLL TO TOP - sve stranice
+// STRELICA SCROLL TO TOP - sve stranice 
 
 
 var scrollTopBtn = document.getElementById("scrollTopBtn");
