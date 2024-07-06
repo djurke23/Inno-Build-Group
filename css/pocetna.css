@@ -41,12 +41,7 @@ position: relative;
 .info-item {
     display: inline-block;
     margin: 0 15px;
-    color: white;
-
-
-
-
-    
+    color: white;  
     transition: transform 0.3s ease;
 }
 .info-item:hover {
@@ -55,7 +50,6 @@ position: relative;
 .info-item i {
     margin-right: 5px;
 }
-
 
 
 
@@ -104,6 +98,65 @@ nav img {
     width: 100%;
 }
 
+/* NAV BAR IKONICE ULAZ IZLAZ */
+.fa-bars, .fa-xmark {
+    display: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        background: rgba(0, 0, 0, 0.9); /* Promenjena boja pozadine */
+        height: 100vh;
+        width: 100%; /* Puna širina ekrana */
+        top: 0;
+        right: -100%; /* Inicijalno sakriveno van ekrana */
+        text-align: center; /* Centriran tekst */
+        z-index: 2;
+        transition: 0.5s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .nav-links ul {
+        padding: 0;
+    }
+
+    .nav-links ul li {
+        display: block;
+        padding: 20px 0;
+    }
+
+    .nav-links ul li a {
+        font-size: 24px; /* Povećana veličina fonta */
+    }
+
+    .fa-bars {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 3;
+    }
+
+    .fa-xmark {
+        display: none; /* Inicijalno sakriveno */
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 4;
+    }
+
+    .nav-active {
+        right: 0;
+    }
+}
+
+
 
 /* TEXT NASLOV GLAVNI - index.html */
 .text-box {
@@ -125,64 +178,6 @@ nav img {
     font-size: 14px;
     color: #fff;
 }
-
-
-
-
-/* NAV BAR IKONICE ULAZ IZLAZ */
-.fa-bars, .fa-xmark {
-    display: none;
-    color: #fff;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    .text-box h1 {
-        font-size: 20px;
-    }
-
-    .nav-links {
-        position: fixed;
-        background: #f44336;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 2;
-        transition: 0.5s;
-    }
-
-    .nav-links ul {
-        padding: 30px;
-    }
-
-    .nav-links ul li {
-        display: block;
-        padding: 20px 0;
-    }
-
-    .fa-bars, .fa-xmark {
-        display: block;
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        z-index: 3;
-    }
-
-    .fa-xmark {
-        right: 20px;
-        top: 20px;
-    }
-
-    .nav-active {
-        right: 0;
-    }
-}
-
-
-
 
 
 /* USLUGE 1 - index.html */
