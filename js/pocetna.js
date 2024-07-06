@@ -3,25 +3,14 @@
 
 
 
-// X i Bars za nav bar mobilni prikaz
-
-
-const navLinks = document.getElementById("navLinks");
-const openMenu = document.getElementById("openMenu");
-const closeMenu = document.getElementById("closeMenu");
-
-openMenu.addEventListener("click", () => {
-    navLinks.style.right = "0";
-    openMenu.style.display = "none";
-    closeMenu.style.display = "block";
-});
-
-closeMenu.addEventListener("click", () => {
-    navLinks.style.right = "-100%";
-    closeMenu.style.display = "none";
-    openMenu.style.display = "block";
-});
-
+/ ikonice za nav bar x i plocice - sve stranice
+var navLinks = document.getElementById ("navLinks") ;
+function showMenu(){
+navLinks.style.right = "0";
+}
+function hideMenu(){
+navLinks.style.right = "-200px";
+}
 
 
 
