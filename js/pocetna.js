@@ -3,7 +3,7 @@
 
 
 
-/ ikonice za nav bar x i plocice - sve stranice
+// ikonice za nav bar x i plocice - sve stranice
 var navLinks = document.getElementById ("navLinks") ;
 function showMenu(){
 navLinks.style.right = "0";
