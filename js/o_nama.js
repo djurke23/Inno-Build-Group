@@ -1,3 +1,11 @@
+
+// LOADING SCREEN - sve stranice
+
+$(window).on("load",function(){
+    $(".loader-wrapper").fadeOut("slow");
+}); 
+
+
 // STRELICA SCROLL TO TOP - sve stranice
 
 
@@ -26,9 +34,3 @@ function scrollToTop() {
     }
 }
 
-
-// LOADING SCREEN - sve stranice
-
-$(window).on("load",function(){
-    $(".loader-wrapper").fadeOut("slow");
-}); 
