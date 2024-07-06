@@ -91,3 +91,25 @@ document.addEventListener('DOMContentLoaded', function() {
         isResizing = false;
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// LOADING SCREEN - sve stranice
+
+$(window).on("load",function(){
+    $(".loader-wrapper").fadeOut("slow");
+}); 
