@@ -6,17 +6,17 @@
 
 
 
-// ikonice za nav bar x i plocice - sve stranice
+const navLinks = document.getElementById("navLinks");
+const openMenu = document.getElementById("openMenu");
+const closeMenu = document.getElementById("closeMenu");
 
-var navLinks = document.getElementById ("navLinks") ;
-function showMenu(){
-navLinks.style.right = "0";
-}
+openMenu.addEventListener("click", () => {
+    navLinks.style.right = "0";
+});
 
-function hideMenu(){
-navLinks.style.right = "-200px";
-}
-
+closeMenu.addEventListener("click", () => {
+    navLinks.style.right = "-200px";
+});
 
 
 
