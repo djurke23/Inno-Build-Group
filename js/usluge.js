@@ -25,3 +25,11 @@ function scrollToTop() {
         window.scrollTo(0, currentPosition - currentPosition / 8);
     }
 }
+
+
+
+// LOADING SCREEN - sve stranice
+
+$(window).on("load",function(){
+    $(".loader-wrapper").fadeOut("slow");
+}); 
