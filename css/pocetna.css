@@ -850,7 +850,7 @@ transition: transform 0.3s ease; /* Dodavanje prelaza za glatki efekat */
 
 
 
-/* INFINITE SLIDER - index.html */
+/* INFINITE SLIDER - index.html 
 
 
 .logo-slider {
@@ -879,7 +879,7 @@ transition: transform 0.3s ease; /* Dodavanje prelaza za glatki efekat */
     100% { transform: translateX(calc(-200px * 6)); }
 }
 
-
+*/
 
 
 /* KONTAKTIRAJTE NAS - index.html */
@@ -898,7 +898,10 @@ transition: transform 0.3s ease; /* Dodavanje prelaza za glatki efekat */
 }
 
 .poziv h1{
-    color: #fff;
+    color: #000000;
+    margin-bottom: 40px;
+    padding: 0;
+};
     margin-bottom: 40px;
     padding: 0;
 }
