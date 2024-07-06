@@ -109,21 +109,23 @@ nav img {
 @media (max-width: 768px) {
     .nav-links {
         position: fixed;
-        background: rgba(0, 0, 0, 0.9); /* Promenjena boja pozadine */
+        background: rgba(0, 0, 0, 0.9);
         height: 100vh;
-        width: 100%; /* Puna širina ekrana */
+        width: 100%;
         top: 0;
-        right: -100%; /* Inicijalno sakriveno van ekrana */
-        text-align: center; /* Centriran tekst */
+        right: -100%;
+        text-align: center;
         z-index: 2;
         transition: 0.5s;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start; /* Promena sa center na flex-start */
+        padding-top: 60px; /* Dodajemo prostor na vrhu za info bar */
     }
 
     .nav-links ul {
         padding: 0;
+        margin-top: 20px; /* Dodatni prostor iznad linkova */
     }
 
     .nav-links ul li {
@@ -132,21 +134,21 @@ nav img {
     }
 
     .nav-links ul li a {
-        font-size: 24px; /* Povećana veličina fonta */
+        font-size: 24px;
     }
 
     .fa-bars {
         display: block;
-        position: absolute;
-        top: 20px;
+        position: fixed; /* Promena sa absolute na fixed */
+        top: 70px; /* Pomeramo dugme ispod info bara */
         right: 20px;
         z-index: 3;
     }
 
     .fa-xmark {
-        display: none; /* Inicijalno sakriveno */
-        position: absolute;
-        top: 20px;
+        display: none;
+        position: fixed; /* Promena sa absolute na fixed */
+        top: 70px; /* Pomeramo X dugme ispod info bara */
         right: 20px;
         z-index: 4;
     }
@@ -154,29 +156,6 @@ nav img {
     .nav-active {
         right: 0;
     }
-}
-
-
-
-/* TEXT NASLOV GLAVNI - index.html */
-.text-box {
-    width: 90%;
-    color: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.text-box h1 {
-    font-size: 62px;
-}
-
-.text-box p {
-    margin: 10px 0 40px;
-    font-size: 14px;
-    color: #fff;
 }
 
 
