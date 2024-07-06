@@ -762,89 +762,152 @@ transition: transform 0.3s ease; /* Dodavanje prelaza za glatki efekat */
 
 
 
+/* Osnovni stilovi */
+body {
+  font-family: Arial, sans-serif;
+}
+
 .testimonial-section {
-    max-width: 1200px;
-    margin: 50px auto;
-    text-align: center;
+  padding: 50px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.testimonial-section h2 {
+  margin-bottom: 20px;
 }
 
 .slider-container {
-    position: relative;
-    overflow: hidden;
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
 }
+
 .slider {
-    display: flex;
-    transition: transform 0.5s ease;
+  display: flex;
+  transition: transform 0.5s ease;
 }
+
 .slide {
-    flex: 0 0 100%;
-    padding: 20px;
-    box-sizing: border-box;
+  min-width: 100%;
+  box-sizing: border-box;
 }
+
 .testimonial {
-    background-color: white;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    margin: 0 15px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 10px;
 }
+
 .testimonial img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-bottom: 15px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
 }
+
 .testimonial p {
-    font-style: italic;
-    color: #666;
-    margin-bottom: 15px;
+  font-style: italic;
+  color: #666;
+  margin-bottom: 15px;
 }
+
 .testimonial .name {
-    font-weight: bold;
-    color: #333;
+  font-weight: bold;
+  color: #333;
 }
+
 .testimonial .role {
-    color: #999;
-    font-size: 0.9em;
+  color: #999;
+  font-size: 0.9em;
 }
+
 .nav-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #284c53;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #284c53;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 5px;
 }
-.prev { left: 10px; }
-.next { right: 10px; }
+
+.prev { 
+  left: 10px; 
+}
+
+.next { 
+  right: 10px; 
+}
+
 .dots {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
+
 .dot {
-    width: 10px;
-    height: 10px;
-    background-color: #bbb;
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
+  width: 10px;
+  height: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
 }
+
 .dot.active {
-    background-color: #717171;
+  background-color: #717171;
 }
 
 /* Novi stil za zvezdice */
 .stars {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
+
 .star {
-    color: #FFD700;
-    font-size: 24px;
+  color: #FFD700;
+  font-size: 24px;
+}
+
+/* Responzivnost */
+@media (max-width: 768px) {
+  .testimonial-section {
+    padding: 20px;
+  }
+
+  .testimonial {
+    padding: 15px;
+    margin: 10px 0;
+  }
+
+  .testimonial img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .testimonial p {
+    font-size: 14px;
+  }
+
+  .testimonial .name, .testimonial .role {
+    font-size: 14px;
+  }
+
+  .nav-button {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
 }
 
 
