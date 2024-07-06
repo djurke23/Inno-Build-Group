@@ -898,7 +898,7 @@ transition: transform 0.3s ease; /* Dodavanje prelaza za glatki efekat */
 }
 
 .poziv h1{
-    color: #000000;
+    color: #fffff;
     margin-bottom: 40px;
     padding: 0;
 };
