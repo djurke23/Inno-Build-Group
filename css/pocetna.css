@@ -1,31 +1,21 @@
 
-
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
 
-/* INDEX.HTML */
-
-
-
 /* HEADER ZAGLAVLJE */
-
-.header{
-min-height: 100vh;
-width: 100%;
-background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)) ,url('../slike/pozadina1.jpg');
-background-position: center;
-background-size: cover;
-position: relative;
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url('../slike/pozadina1.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
 }
 
-
-
 /* INFO BAR - sve stranice */
-
-
 .info-bar {
     background-color: #284c53;
     padding: 10px 0;
@@ -35,33 +25,27 @@ position: relative;
     z-index: 1000;
     transition: background-color 0.3s ease;
 }
+
 .info-bar:hover {
     background-color: #071825;
 }
+
 .info-item {
     display: inline-block;
     margin: 0 15px;
     color: white;
-
-
-
-
-    
     transition: transform 0.3s ease;
 }
+
 .info-item:hover {
     transform: translateY(-2px);
 }
+
 .info-item i {
     margin-right: 5px;
 }
 
-
-
-
 /* NAVIGACIONI BAR - sve stranice */
-
-/* Opšti stilovi za navigaciju */
 nav {
     display: flex;
     padding: 2% 6%;
@@ -94,7 +78,7 @@ nav img {
     font-size: 20px;
 }
 
-.nav-links ul li::after{
+.nav-links ul li::after {
     content: '';
     width: 0%;
     height: 2px;
@@ -104,18 +88,67 @@ nav img {
     transition: 0.5s;
 }
 
-.nav-links ul li:hover::after{
+.nav-links ul li:hover::after {
     width: 100%;
 }
 
-/* Stilovi za mobilne uređaje */
-@media (max-width: 700px) {
+/* TEXT NASLOV GLAVNI - index.html */
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 62px;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+
+/* DUGME GLAVNO - index.html */
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn:hover {
+    border: 1px solid #f44336;
+    background: #f44336;
+    transition: 1s;
+}
+
+/* NAV BAR IKONICE ULAZ IZLAZ */
+nav .fa-solid {
+    display: none;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
     nav {
         padding: 15px 6%;
     }
 
     nav img {
-        width: 150px; /* Smanjujemo logo za mobilne uređaje */
+        width: 150px;
+    }
+
+    .text-box h1 {
+        font-size: 20px;
     }
 
     .nav-links {
@@ -128,11 +161,11 @@ nav img {
         text-align: left;
         z-index: 1001;
         transition: 0.5s;
+        padding-top: 60px;
     }
 
     .nav-links ul {
         padding: 30px;
-        padding-top: 80px; /* Dodajemo dodatni prostor na vrhu za X ikonu */
     }
 
     .nav-links ul li {
@@ -156,185 +189,10 @@ nav img {
 
     #closeMenu {
         position: absolute;
-        top: 20px;
-        right: 20px;
-    }
-}
-
-
-
-
-/* TEXT NASLOV GLAVNI - index.html */
-
-.text-box{
-width: 90%;
-color: #fff;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%,-50%);
-text-align: center;
-}
-
-.text-box h1{
-    font-size: 62px;
-}
-
-.text-box p{
-    margin: 10px 0 40px;
-    font-size: 14px;
-    color: #fff;
-}
-
-
-@media (max-width: 700px) {
-    .nav-links {
-        position: fixed;
-        background: #f44336;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 2;
-        transition: 0.5s;
-    }
-
-    .nav-links ul {
-        padding: 30px;
-    }
-
-    .nav-links ul li {
-        display: block;
-    }
-
-    #openMenu, #closeMenu {
-        display: block;
-        color: #fff;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
-    }
-
-    #closeMenu {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-    }
-
-    /* Ensure the burger icon is visible by default on mobile */
-    #openMenu {
-        display: block;
-    }
-}
-
-
-/* DUGME GLAVNO - index.html */
-
-.hero-btn{
-display: inline-block;
-text-decoration: none;
-color: #fff;
-border: 1px solid #fff;
-padding: 12px 34px;
-font-size: 13px;
-background: transparent;
-position: relative;
-cursor: pointer;
-}
-
-.hero-btn:hover{
-    border: 1px solid #f44336;
-    background: #f44336;
-    transition: 1s;
-}
-
-
-
-
-/* NAV BAR IKONICE ULAZ IZLAZ  */
-
-nav .fa-solid{
-    display: none;
-}
-
-
-@media (max-width: 700px){
-
-.text-box h1{
-font-size: 20px;
-}
-
-.nav-links ul li{
-display: block;
-}
-
-.nav-links {
-    position: fixed;
-    background: #f44336;
-    height: 100vh;
-    width: 200px;
-    top: 0;
-    right: -200px;
-    text-align: left;
-    z-index: 2;
-    transition: 0.5s;
-}
-
-nav .fa-solid {
-    display: block;
-    color: #fff;
-    margin: 10px;
-    font-size: 22px;
-    cursor: pointer;
-}
-
-.fa-xmark {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-
-.nav-links ul {
-    padding: 30px;
-}
-
-}
-
-
-/* Adjust the X icon positioning */
-.fa-xmark {
-    color: #fff;
-    font-size: 24px;
-    cursor: pointer;
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    padding: 10px;
-}
-
-/* For mobile view */
-@media (max-width: 768px) {
-    .nav-links {
-        position: fixed;
-        background: #f44336;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 2;
-        transition: 0.5s;
-        padding-top: 60px; /* Add some top padding to push content down */
-    }
-
-    .fa-xmark {
-        top: 40px; /* Adjust this value to move it lower */
+        top: 40px;
         right: 30px;
-    }
-
-    .nav-links ul {
-        padding: 30px;
+        font-size: 24px;
+        padding: 10px;
     }
 }
 
