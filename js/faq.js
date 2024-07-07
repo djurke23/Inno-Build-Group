@@ -38,9 +38,23 @@ function scrollToTop() {
 
 
 
-//newsletter
 
-document.querySelector('form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Hvala na pretplati!');
+
+
+
+// faq
+
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const arrow = question.querySelector('.arrow');
+        
+        if (answer.style.maxHeight) {
+            answer.style.maxHeight = null;
+            arrow.classList.remove('active');
+        } else {
+            answer.style.maxHeight = answer.scrollHeight + "px";
+            arrow.classList.add('active');
+        }
+    });
 });

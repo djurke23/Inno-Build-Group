@@ -1,9 +1,60 @@
 
-// LOADING SCREEN - sve stranice
+
+
+// ikonice za nav bar fon
+
+document.addEventListener('DOMContentLoaded', function() {
+    var navLinks = document.getElementById("navLinks");
+    var openMenuBtn = document.getElementById("openMenu");
+    var closeMenuBtn = document.getElementById("closeMenu");
+    
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+    
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+
+    openMenuBtn.addEventListener('click', showMenu);
+    closeMenuBtn.addEventListener('click', hideMenu);
+});
+
+// saznaj vise smooth 
+
+document.getElementById('saznajViseBtn').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.querySelector('#usluge').scrollIntoView({
+        behavior: 'smooth'
+    });
+});
+
+
+// faq
+
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', () => {
+        const answer = question.nextElementSibling;
+        const arrow = question.querySelector('.arrow');
+        
+        if (answer.style.maxHeight) {
+            answer.style.maxHeight = null;
+            arrow.classList.remove('active');
+        } else {
+            answer.style.maxHeight = answer.scrollHeight + "px";
+            arrow.classList.add('active');
+        }
+    });
+});
+
+
+
+// loading screen
 
 $(window).on("load",function(){
     $(".loader-wrapper").fadeOut("slow");
 }); 
+
 
 
 
@@ -35,71 +86,6 @@ function scrollToTop() {
         window.scrollTo(0, currentPosition - currentPosition / 8);
     }
 }
-
-
-
-
-
-
-
-
-
-
-// galerija before after
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    const sliders = document.querySelectorAll('.before-after-slider');
-
-    sliders.forEach(slider => {
-        const beforeImage = slider.querySelector('.before-image');
-        const afterImage = slider.querySelector('.after-image');
-        const sliderHandle = slider.querySelector('.slider-handle');
-
-        let isResizing = false;
-
-        const resize = (e) => {
-            if (!isResizing) return;
-            
-            const sliderRect = slider.getBoundingClientRect();
-            const x = (e.clientX || e.touches[0].clientX) - sliderRect.left;
-            const percent = (x / sliderRect.width) * 100;
-            
-            if (percent > 0 && percent < 100) {
-                afterImage.style.width = `${percent}%`;
-                sliderHandle.style.left = `${percent}%`;
-            }
-        };
-
-        sliderHandle.addEventListener('mousedown', (e) => {
-            e.preventDefault();
-            isResizing = true;
-        });
-
-        sliderHandle.addEventListener('touchstart', (e) => {
-            e.preventDefault();
-            isResizing = true;
-        });
-
-        document.addEventListener('mousemove', resize);
-        document.addEventListener('touchmove', resize);
-
-        document.addEventListener('mouseup', () => {
-            isResizing = false;
-        });
-
-        document.addEventListener('touchend', () => {
-            isResizing = false;
-        });
-    });
-});
-
-
-
-
-
-
 
 
 // Galerija
@@ -195,3 +181,144 @@ function openFullscreen(imageSrc) {
         }
     });
 }
+
+
+
+
+
+
+// recenzije
+
+
+const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+        const dotsContainer = document.querySelector('.dots');
+
+        let currentIndex = 0;
+
+        // Kreiranje tačkica
+        slides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(index));
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.dot');
+
+        function updateDots() {
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+
+        function goToSlide(index) {
+            currentIndex = index;
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            updateDots();
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            goToSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            goToSlide(currentIndex);
+        }
+
+        nextButton.addEventListener('click', nextSlide);
+        prevButton.addEventListener('click', prevSlide);
+
+        // Automatsko pomeranje svakih 5 sekundi
+        setInterval(nextSlide, 5000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //inf slajder
+
+ 
+        //       const track = document.querySelector('.logo-slide-track');
+        
+ 
+        //       track.addEventListener('animationiteration', () => {
+ 
+        //           track.style.animation = 'none';
+ 
+        //           track.offsetHeight; // Trigger reflow
+ 
+        //           track.style.animation = null;
+  
+        //      });
+
+
+        //newsletter
+
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Hvala na pretplati!');
+        });
+
+
+
+
+//STATISTIKA
+    
+        const stats = [
+            { id: 'projectsCompleted', end: 132 },
+            { id: 'yearsExperience', end: 15 },
+            { id: 'satisfiedClients', end: 132 },
+            { id: 'workHours', end: 30000 }
+        ];
+
+        function animateStats(duration = 2000) {
+            const steps = 60;
+            const interval = duration / steps;
+            let step = 0;
+
+            const timer = setInterval(() => {
+                if (step <= steps) {
+                    stats.forEach(stat => {
+                        const value = Math.round((stat.end / steps) * step);
+                        const element = document.getElementById(stat.id);
+                        element.textContent = value;
+                        if (step === steps && stat.end >= 1000) {
+                            element.textContent += '+';
+                        }
+                    });
+                    step++;
+                } else {
+                    clearInterval(timer);
+                }
+            }, interval);
+        }
+
+        function checkVisibility() {
+            const section = document.getElementById('statsSection');
+            const rect = section.getBoundingClientRect();
+            const isVisible = (rect.top <= window.innerHeight && rect.bottom >= 0);
+            if (isVisible) {
+                animateStats();
+                window.removeEventListener('scroll', checkVisibility);
+            }
+        }
+
+        window.addEventListener('scroll', checkVisibility);
+        window.addEventListener('load', checkVisibility);
