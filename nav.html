@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Napredni Responzivni Nav Bar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 1rem;
+        }
+        .logo {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links li {
+            margin-left: 1rem;
+            position: relative;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            position: relative;
+            padding: 0.5rem 1rem;
+        }
+        .nav-links a::before,
+        .nav-links a::after,
+        .nav-links a span::before,
+        .nav-links a span::after {
+            content: '';
+            position: absolute;
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+        .nav-links a::before,
+        .nav-links a::after {
+            height: 2px;
+            width: 0;
+        }
+        .nav-links a::before {
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .nav-links a::after {
+            top: 0;
+            right: 50%;
+            transform: translateX(50%);
+        }
+        .nav-links a span::before,
+        .nav-links a span::after {
+            width: 2px;
+            height: 0;
+        }
+        .nav-links a span::before {
+            left: 0;
+            bottom: 50%;
+            transform: translateY(50%);
+        }
+        .nav-links a span::after {
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .nav-links a:hover::before,
+        .nav-links a:hover::after,
+        .nav-links a:hover span::before,
+        .nav-links a:hover span::after {
+            width: 100%;
+            height: 100%;
+        }
+        .burger {
+            display: none;
+            cursor: pointer;
+            width: 30px;
+            height: 20px;
+            position: relative;
+        }
+        .burger .line {
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            position: absolute;
+            transition: all 0.3s ease;
+        }
+        .burger .line1 { top: 0; }
+        .burger .line2 { top: 50%; transform: translateY(-50%); }
+        .burger .line3 { bottom: 0; }
+        @media screen and (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                right: 0;
+                top: 8vh;
+                background-color: #333;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                max-height: 300px; /* ograničena visina */
+                transform: translateX(100%);
+                transition: transform 0.5s ease-in;
+                overflow-y: auto; /* omogućava skrolovanje ako je sadržaj veći od maksimalne visine */
+            }
+            .nav-links li {
+                opacity: 0;
+                margin: 1rem 0;
+                width: 80%;
+            }
+            .nav-links a {
+                display: block;
+                text-align: center;
+                padding: 1rem;
+            }
+            .burger {
+                display: block;
+            }
+        }
+        .nav-active {
+            transform: translateX(0%);
+        }
+        @keyframes navLinkFade {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+        }
+        .toggle .line1 {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+        .toggle .line2 {
+            opacity: 0;
+        }
+        .toggle .line3 {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">Logo</a>
+        <ul class="nav-links">
+            <li><a href="#"><span>Usluge</span></a></li>
+            <li><a href="#"><span>Galerija</span></a></li>
+            <li><a href="#"><span>O nama</span></a></li>
+            <li><a href="#"><span>Kontakt</span></a></li>
+        </ul>
+        <div class="burger">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+        </div>
+    </nav>
+
+    <script>
+        const navSlide = () => {
+            const burger = document.querySelector('.burger');
+            const nav = document.querySelector('.nav-links');
+            const navLinks = document.querySelectorAll('.nav-links li');
+
+            burger.addEventListener('click', () => {
+                nav.classList.toggle('nav-active');
+
+                navLinks.forEach((link, index) => {
+                    if (link.style.animation) {
+                        link.style.animation = '';
+                    } else {
+                        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                    }
+                });
+
+                burger.classList.toggle('toggle');
+            });
+        }
+
+        navSlide();
+    </script>
+</body>
+</html>
