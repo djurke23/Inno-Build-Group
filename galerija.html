@@ -34,7 +34,6 @@
 
 
 <!-- info bar -->
-
 <div class="info-bar">
   <span class="info-item">
       <i class="fas fa-phone"></i> 065/269-7144
@@ -47,46 +46,27 @@
   </span>
 </div>
 
-  
+<section class="sub-header">
+  <nav>
+      <!-- LOGO  -->
+      <a href="index.html"> <img src="slike/logov2.png" alt="logo"> </a>
 
-    <section class="sub-header">
+      <div class="nav-links" id="navLinks">
+          <!-- Ikonica X za izlaz iz nav bara  -->
+          <i class="fa-solid fa-xmark" id="closeMenu"></i>
 
-    <nav>
-
-<!-- LOGO  -->
-        <a href="index.html"> <img src="slike/logov2.png" alt="logo"> </a>
-
-        <div class="nav-links" id="navLinks">
-
-            <!-- Ikonica X za izlaz iz nav bara  -->
-            <i class="fa-solid fa-xmark" onclick="hideMenu()"> </i>
-
-
-
-
-
-
-<!-- NAVIGACIONI BAR -->
-
-<ul>
-
-            <li> <a href="index.html">  POČETNA     </a> </li>
-            <li> <a href="o_nama.html">  O NAMA      </a> </li>
-            <li> <a href="galerija.html">  GALERIJA    </a> </li>
-            <li> <a href="usluge.html">  USLUGE      </a> </li>
-            <!-- <li> <a href="blog.html">  BLOG        </a> </li> -->
-            <li> <a href="kontakt.html">  KONTAKT     </a> </li>
-
-</ul>
-
-</div>
-            <!-- Ikonica Plocice za ulaz u nav bar  -->
-            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
-
-</nav>
-
-</section>
-
+          <!-- NAVIGACIONI BAR -->
+          <ul>
+              <li> <a href="index.html">  POČETNA     </a> </li>
+              <li> <a href="o_nama.html">  O NAMA      </a> </li>
+              <li> <a href="galerija.html">  GALERIJA    </a> </li>
+              <li> <a href="usluge.html">  USLUGE      </a> </li>
+              <li> <a href="kontakt.html">  KONTAKT     </a> </li>
+          </ul>
+      </div>
+      <!-- Ikonica Plocice za ulaz u nav bar  -->
+      <i class="fa-solid fa-bars" id="openMenu"></i>
+  </nav>
 
 
 
@@ -384,6 +364,9 @@
 
 
 <script src="js/galerija.js"> 
+</script>
+
+<script src="js/menu.js"> 
 </script>
 
 <!-- Font Awesome Kit -->

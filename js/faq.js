@@ -58,3 +58,30 @@ document.querySelectorAll('.faq-question').forEach(question => {
         }
     });
 });
+
+
+
+
+
+
+
+
+// ikonice za nav bar fon
+document.addEventListener('DOMContentLoaded', function() {
+    var navLinks = document.getElementById("navLinks");
+    var openMenuBtn = document.getElementById("openMenu");
+    var closeMenuBtn = document.getElementById("closeMenu");
+    
+    function showMenu() {
+        navLinks.style.right = "0";
+        openMenuBtn.style.display = "none"; // Hide the burger icon
+    }
+    
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+        openMenuBtn.style.display = "block"; // Show the burger icon again
+    }
+
+    if(openMenuBtn) openMenuBtn.addEventListener('click', showMenu);
+    if(closeMenuBtn) closeMenuBtn.addEventListener('click', hideMenu);
+});
