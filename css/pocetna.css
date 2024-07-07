@@ -729,6 +729,10 @@ transition: transform 0.3s ease; /* Dodavanje prelaza za glatki efekat */
     text-align: left;
 }
 
+.objekat h1{
+    color: #000;
+}
+
 /* FAQ - index */
 
 .container3 {
