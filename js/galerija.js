@@ -106,32 +106,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 const galleryItems = [
-    { type: 'kuhinja', image: 'https://s3.emmezeta.hr/media/catalog/product/6/6/664140-smart-blok-kuhinja-260x60x212cm-hrast-bijela_1.jpg', title: 'Kuhinja 1', description: 'Lorem ipsum dolor...' },
-    { type: 'kuhinja', image: 'https://vitorogpromet.rs/wp-content/uploads/2023/05/dalia-kuhinja.png', title: 'Kuhinja 2', description: 'Lorem ipsum dolor...' },
-    { type: 'kuhinja', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYOKacoSze0iCA06U_k2I077KLS81N2utp0Q&s', title: 'Kuhinja 3', description: 'Lorem ipsum dolor...' },
-    { type: 'kuhinja', image: 'https://vitorogpromet.rs/wp-content/uploads/2022/12/Kuhinja-Norma-14.png', title: 'Kuhinja 4', description: 'Lorem ipsum dolor...' },
+    { type: 'kuhinja', image: 'slike/galerija/kuhinja.png', title: 'Kuhinja ', description: '' },
+    { type: 'kuhinja', image: 'slike/galerija/trpezarija.png', title: 'Trpezarija', description: '' },
+    { type: 'kuhinja', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYOKacoSze0iCA06U_k2I077KLS81N2utp0Q&s', title: 'Kuhinja 3', description: '' },
+    { type: 'kuhinja', image: 'https://vitorogpromet.rs/wp-content/uploads/2022/12/Kuhinja-Norma-14.png', title: 'Kuhinja 4', description: '' },
     
-    { type: 'kupatilo', image: 'https://zadovoljna.nova.rs/wp-content/uploads/2023/12/28/1703765587-profimedia-0832052610-750x500.jpg', title: 'Kupatilo 1', description: 'Lorem ipsum dolor...' },
-    { type: 'kupatilo', image: 'https://www.keramikajovanovic.rs/wp-content/uploads/2015/12/malo-kupatilo_small.jpg.webp', title: 'Kupatilo 2', description: 'Lorem ipsum dolor...' },
-    { type: 'kupatilo', image: 'https://neml.ba/wp-content/uploads/2023/02/mejtas-kupatilo-1.jpg', title: 'Kupatilo 3', description: 'Lorem ipsum dolor...' },
-    { type: 'kupatilo', image: 'https://www.diplon.net/files/images/2020/3/10/malo-kupatilo.jpg', title: 'Kupatilo 4', description: 'Lorem ipsum dolor...' },
+    { type: 'kupatilo', image: 'slike/galerija/kupatilo 1.png', title: 'Kupatilo 1', description: '' },
+    { type: 'kupatilo', image: 'slike/galerija/kupatilo4.png', title: 'Kupatilo 2', description: '' },
+    { type: 'kupatilo', image: 'slike/galerija/kupatilo2.png', title: 'Kupatilo 3', description: '' },
+    { type: 'kupatilo', image: 'https://th.bing.com/th/id/OIP.t5pYjkPcCtcdWUyTQtyWXgHaEo?w=283&h=180&c=7&r=0&o=5&pid=1.7', title: 'Kupatilo 4', description: '' },
     
-    { type: 'terasa', image: 'https://provansadekor.rs/wp-content/uploads/2023/07/uredjenje-terasa-6.jpg', title: 'Terasa 1', description: 'Lorem ipsum dolor...' },
-    { type: 'terasa', image: 'https://provansadekor.rs/wp-content/uploads/2023/07/uredjenje-terase-provansa-green-centar-1.jpg', title: 'Terasa  2', description: 'Lorem ipsum dolor...' },
-    { type: 'terasa', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1_hndufnhu_abRNxnAtZzl8cKyNrSQcJE6Q&s', title: 'Terasa  3', description: 'Lorem ipsum dolor...' },
-    { type: 'terasa', image: 'https://portoflife.rs/wp-content/uploads/2018/06/terasa-balkon-velika.jpg', title: 'Terasa  4', description: 'Lorem ipsum dolor...' },
+    
+    
+    { type: 'terasa', image: 'slike/galerija/stepenice.png', title: 'Stepenice', description: '' },
+    { type: 'terasa', image: 'slike/galerija/terasa.png', title: 'Terasa  ', description: '' },
+    { type: 'terasa', image: 'slike/galerija/jakuzi.png', title: 'Balkon', description: '' },
+    { type: 'terasa', image: 'https://portoflife.rs/wp-content/uploads/2018/06/terasa-balkon-velika.jpg', title: 'Terasa  2', description: '' },
 
-    { type: 'dvoriste', image: 'https://provansadekor.rs/wp-content/uploads/2023/07/uredjenje-terasa-6.jpg', title: 'Terasa 1', description: 'Lorem ipsum dolor...' },
-    { type: 'dvoriste', image: 'https://provansadekor.rs/wp-content/uploads/2023/07/uredjenje-terase-provansa-green-centar-1.jpg', title: 'Terasa  2', description: 'Lorem ipsum dolor...' },
-    { type: 'dvoriste', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1_hndufnhu_abRNxnAtZzl8cKyNrSQcJE6Q&s', title: 'Terasa  3', description: 'Lorem ipsum dolor...' },
-    { type: 'dvoriste', image: 'https://portoflife.rs/wp-content/uploads/2018/06/terasa-balkon-velika.jpg', title: 'Terasa  4', description: 'Lorem ipsum dolor...' },
+ //    { type: 'dvoriste', image: 'slike/galerija/soba1.png', title: 'Spavaća Soba', description: '' },
+ //    { type: 'dvoriste', image: 'https://provansadekor.rs/wp-content/uploads/2023/07/uredjenje-terase-provansa-green-centar-1.jpg', title: 'Terasa  2', description: '' },
+ //   { type: 'dvoriste', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1_hndufnhu_abRNxnAtZzl8cKyNrSQcJE6Q&s', title: 'Terasa  3', description: '' },
+ //   { type: 'dvoriste', image: 'https://portoflife.rs/wp-content/uploads/2018/06/terasa-balkon-velika.jpg', title: 'Terasa  4', description: '' },
 
-    { type: 'projekti', image: 'https://provansadekor.rs/wp-content/uploads/2023/07/uredjenje-terasa-6.jpg', title: 'Terasa 1', description: 'Lorem ipsum dolor...' },
-    { type: 'projekti', image: 'https://provansadekor.rs/wp-content/uploads/2023/07/uredjenje-terase-provansa-green-centar-1.jpg', title: 'Terasa  2', description: 'Lorem ipsum dolor...' },
-    { type: 'projekti', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1_hndufnhu_abRNxnAtZzl8cKyNrSQcJE6Q&s', title: 'Terasa  3', description: 'Lorem ipsum dolor...' },
-    { type: 'projekti', image: 'https://portoflife.rs/wp-content/uploads/2018/06/terasa-balkon-velika.jpg', title: 'Terasa  4', description: 'Lorem ipsum dolor...' },
+    { type: 'projekti', image: 'slike/galerija/soba.jpg', title: 'Dnevna Soba ', description: '' },
+    { type: 'projekti', image: 'slike/galerija/decijasoba.png', title: 'Dečija Soba', description: '' },
+    { type: 'projekti', image: 'slike/galerija/soba1.png', title: 'Spavaća Soba', description: '' },
+    { type: 'projekti', image: 'slike/galerija/soba2.png', title: 'Spavaća Soba 2', description: '' },
 ];
-
 
 const gallery = document.querySelector('.gallery');
 const filterButtons = document.querySelectorAll('.filter-button');

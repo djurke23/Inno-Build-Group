@@ -1685,7 +1685,7 @@ p {
 
 
 
-/* galerija pre pol=sle */
+/* galerija pre posle */
 
 
 .gallery-container {
@@ -1760,6 +1760,9 @@ p {
 .slider-handle:hover::before {
     background: #f0f0f0;
 }
+
+
+
 
 
 
