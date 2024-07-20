@@ -157,7 +157,7 @@ nav .fa-solid {
         width: 150px;
         margin-bottom: 20px;
         position: absolute;
-        top: 30px; /* Adjust this value to position the logo correctly */
+        top: 70px; /* Adjust this value to position the logo correctly */
         left: 50%;
         transform: translateX(-50%);
     }
