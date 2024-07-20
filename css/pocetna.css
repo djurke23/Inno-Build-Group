@@ -16,7 +16,9 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center; /* Dodato za centriranje sadržaja */
 }
+
 
 /* INFO BAR - sve stranice */
 .info-bar {
@@ -49,7 +51,9 @@
 }
 
 /* NAVIGACIONI BAR - sve stranice */
+
 nav {
+    width: 100%; /* Dodato za širinu navigacije */
     display: flex;
     padding: 2% 6%;
     justify-content: space-between;
@@ -145,21 +149,22 @@ nav .fa-solid {
 @media (max-width: 768px) {
     .header {
         padding-top: 120px; /* Add space for the info bar */
+        flex-direction: column; /* Adjust direction to column for mobile */
+        align-items: center; /* Center items */
     }
 
     nav {
-        padding: 15px 6%;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center; /* Center items in nav */
     }
 
     nav img {
         width: 150px;
         margin-bottom: 20px;
-        position: absolute;
-        top: 20px; /* Adjust this value to position the logo correctly */
-        left: 50%;
-        transform: translateX(-50%);
+        position: relative;
+        top: 0; /* Remove top positioning */
+        left: 0; /* Remove left positioning */
+        transform: none; /* Remove transform */
     }
 
     .text-box {
@@ -234,17 +239,21 @@ nav .fa-solid {
 
 /* Additional adjustments for very small screens */
 @media (max-width: 375px) {
+    .header {
+        padding-top: 140px; /* Further increased padding for smaller screens */
+    }
+
+    nav img {
+        width: 120px;
+        top: 90px; /* Adjust for smaller screens */
+    }
+
     .text-box h1 {
         font-size: 28px;
     }
 
     .text-box p {
         font-size: 12px;
-    }
-
-    .hero-btn {
-        font-size: 11px;
-        padding: 8px 20px;
     }
 }
 
@@ -257,7 +266,7 @@ nav .fa-solid {
 
     nav img {
         width: 120px;
-        top: 40px; /* Adjust for smaller screens */
+        top: 90px; /* Adjust for smaller screens */
     }
 
     .text-box h1 {
@@ -268,6 +277,7 @@ nav .fa-solid {
         font-size: 12px;
     }
 }
+
 
 
 /* USLUGE 1 - index.html */
