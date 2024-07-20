@@ -144,7 +144,7 @@ nav .fa-solid {
 /* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
     .header {
-        padding-top: 100px; /* Add space for the info bar */
+        padding-top: 120px; /* Add space for the info bar */
     }
 
     nav {
@@ -156,6 +156,10 @@ nav .fa-solid {
     nav img {
         width: 150px;
         margin-bottom: 20px;
+        position: absolute;
+        top: 30px; /* Adjust this value to position the logo correctly */
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .text-box {
@@ -241,6 +245,27 @@ nav .fa-solid {
     .hero-btn {
         font-size: 11px;
         padding: 8px 20px;
+    }
+}
+
+
+/* Additional adjustments for very small screens */
+@media (max-width: 375px) {
+    .header {
+        padding-top: 140px; /* Further increased padding for smaller screens */
+    }
+
+    nav img {
+        width: 120px;
+        top: 90px; /* Adjust for smaller screens */
+    }
+
+    .text-box h1 {
+        font-size: 28px;
+    }
+
+    .text-box p {
+        font-size: 12px;
     }
 }
 
