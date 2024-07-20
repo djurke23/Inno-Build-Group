@@ -1,6 +1,7 @@
 
 
 
+
 * {
     margin: 0;
     padding: 0;
@@ -62,7 +63,6 @@ nav {
     align-items: center;
     position: relative;
     z-index: 1000;
-    flex-direction: column; /* Dodato za mobilne uređaje */
 }
 
 nav img {
@@ -152,7 +152,7 @@ nav .fa-solid {
 /* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
     .header {
-        padding-top: 140px; /* Povećan padding za dodatni prostor iznad */
+        padding-top: 120px; /* Add space for the info bar */
         flex-direction: column; /* Adjust direction to column for mobile */
         align-items: center; /* Center items */
     }
@@ -166,7 +166,7 @@ nav .fa-solid {
         width: 150px;
         margin-bottom: 20px;
         position: relative;
-        top: -60px; /* Podignite logotip za dodatnih 60px */
+        top: 20; /* Remove top positioning */
         left: 0; /* Remove left positioning */
         transform: none; /* Remove transform */
     }
@@ -175,6 +175,7 @@ nav .fa-solid {
         top: 50%; /* Adjust top position */
         width: 80%;
     }
+
 
     .text-box h1 {
         font-size: 32px;
@@ -244,12 +245,12 @@ nav .fa-solid {
 /* Additional adjustments for very small screens */
 @media (max-width: 375px) {
     .header {
-        padding-top: 160px; /* Further increased padding for smaller screens */
+        padding-top: 140px; /* Further increased padding for smaller screens */
     }
 
     nav img {
         width: 120px;
-        top: -70px; /* Adjust for smaller screens */
+        top: 60px; /* Adjust for smaller screens */
     }
 
     .text-box h1 {
@@ -260,6 +261,28 @@ nav .fa-solid {
         font-size: 12px;
     }
 }
+
+
+/* Additional adjustments for very small screens */
+@media (max-width: 375px) {
+    .header {
+        padding-top: 140px; /* Further increased padding for smaller screens */
+    }
+
+    nav img {
+        width: 120px;
+        top: 90px; /* Adjust for smaller screens */
+    }
+
+    .text-box h1 {
+        font-size: 28px;
+    }
+
+    .text-box p {
+        font-size: 12px;
+    }
+}
+
 
 
 /* USLUGE 1 - index.html */
