@@ -1,5 +1,6 @@
 
 
+
 * {
     margin: 0;
     padding: 0;
@@ -151,7 +152,7 @@ nav .fa-solid {
 /* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
     .header {
-        padding-top: 120px; /* Add space for the info bar */
+        padding-top: 140px; /* Povećan padding za dodatni prostor iznad */
         flex-direction: column; /* Adjust direction to column for mobile */
         align-items: center; /* Center items */
     }
@@ -165,7 +166,7 @@ nav .fa-solid {
         width: 150px;
         margin-bottom: 20px;
         position: relative;
-        top: 0; /* Remove top positioning */
+        top: -60px; /* Podignite logotip za dodatnih 60px */
         left: 0; /* Remove left positioning */
         transform: none; /* Remove transform */
     }
@@ -243,12 +244,12 @@ nav .fa-solid {
 /* Additional adjustments for very small screens */
 @media (max-width: 375px) {
     .header {
-        padding-top: 140px; /* Further increased padding for smaller screens */
+        padding-top: 160px; /* Further increased padding for smaller screens */
     }
 
     nav img {
         width: 120px;
-        top: 90px; /* Adjust for smaller screens */
+        top: -70px; /* Adjust for smaller screens */
     }
 
     .text-box h1 {
