@@ -143,41 +143,39 @@ nav .fa-solid {
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
-
     .header {
-        min-height: 100vh;
-        padding-top: 60px; /* Increased padding to accommodate the info bar */
+        padding-top: 100px; /* Add space for the info bar */
     }
 
     nav {
+        padding: 15px 6%;
         flex-direction: column;
-        align-items: center;
-        padding: 10px 6%;
+        align-items: flex-start;
     }
 
     nav img {
         width: 150px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 
     .text-box {
-        width: 90%;
-        top: 55%;
+        top: 60%;
+        width: 80%;
     }
 
     .text-box h1 {
-        font-size: 36px;
+        font-size: 32px;
         margin-bottom: 15px;
     }
 
     .text-box p {
         font-size: 14px;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 
     .hero-btn {
         font-size: 12px;
-        padding: 10px 20px;
+        padding: 10px 25px;
     }
 
     .nav-links {
@@ -221,13 +219,12 @@ nav .fa-solid {
     }
 
     .info-bar {
-        padding: 5px 0;
+        flex-direction: column;
+        align-items: center;
     }
 
     .info-item {
-        display: block;
         margin: 5px 0;
-        font-size: 12px;
     }
 }
 
@@ -246,30 +243,6 @@ nav .fa-solid {
         padding: 8px 20px;
     }
 }
-
-@media (max-width: 480px) {
-    .header {
-        padding-top: 80px; /* Further increased padding for smaller screens */
-    }
-
-    .text-box {
-        top: 60%;
-    }
-
-    .text-box h1 {
-        font-size: 28px;
-    }
-
-    .text-box p {
-        font-size: 12px;
-    }
-
-    .hero-btn {
-        font-size: 11px;
-        padding: 8px 16px;
-    }
-}
-
 
 
 
