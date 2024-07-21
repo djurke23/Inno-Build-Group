@@ -1874,6 +1874,8 @@ p {
 
 
 
+* nas tim */ 
+
 /* Postojeći CSS kod */
 .team-section {
     max-width: 1200px;
@@ -1951,71 +1953,85 @@ p {
     font-size: 0.8em;
 }
 
-/* Responzivne izmene */
+/* Dodatne responzivne izmene */
 @media screen and (max-width: 768px) {
     .team-grid {
         grid-template-columns: 1fr;
+        gap: 15px; /* Smanjujemo razmak između kartica */
     }
 
     .team-member {
-        text-align: center;
-        padding: 30px 20px;
+        text-align: left; /* Vraćamo tekst na levo poravnanje */
+        padding: 15px;
+        display: flex;
+        align-items: center;
     }
 
     .member-photo {
         float: none;
-        margin: 0 auto 15px;
-        width: 120px;
-        height: 120px;
+        margin-right: 15px;
+        width: 80px;
+        height: 80px;
+        flex-shrink: 0;
     }
 
     .member-info {
-        clear: both;
+        flex-grow: 1;
     }
 
     .member-name {
-        font-size: 1.3em;
+        font-size: 1.1em;
+        margin-bottom: 2px;
     }
 
     .member-role {
-        font-size: 1em;
+        font-size: 0.9em;
+        margin-bottom: 5px;
     }
 
     .member-bio {
-        font-size: 0.95em;
-        margin-bottom: 20px;
+        font-size: 0.85em;
+        margin-bottom: 10px;
+        /* Adding both webkit-specific and standard properties for line clamping */
+        max-height: 3.6em; /* Approximately 3 lines of text */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+        box-orient: vertical;
     }
 
     .social-links {
-        justify-content: center;
-        display: flex;
+        justify-content: flex-start;
     }
 }
 
 @media screen and (max-width: 480px) {
     .team-section {
-        padding: 10px;
+        padding: 10px 5px;
     }
 
     .team-member {
-        padding: 20px 15px;
+        padding: 10px;
     }
 
     .member-photo {
-        width: 100px;
-        height: 100px;
+        width: 60px;
+        height: 60px;
     }
 
     .member-name {
-        font-size: 1.2em;
+        font-size: 1em;
     }
 
     .member-role {
-        font-size: 0.9em;
+        font-size: 0.8em;
     }
 
     .member-bio {
-        font-size: 0.85em;
+        font-size: 0.75em;
     }
 }
 
