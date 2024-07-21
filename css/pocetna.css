@@ -61,7 +61,7 @@ h4 {
 /* NAVIGACIONI BAR - sve stranice */
 
 nav {
-    width: 100%; /* Dodato za širinu navigacije */
+    width: 100%;
     display: flex;
     padding: 2% 6%;
     justify-content: space-between;
@@ -72,7 +72,7 @@ nav {
 
 nav img {
     width: 210px;
-    margin-bottom: 20px; /* Dodato za margine */
+    margin-bottom: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -154,26 +154,25 @@ nav .fa-solid {
     display: none;
 }
 
+
+
 /* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
     .header {
-        padding-top: 120px; /* Add space for the info bar */
-        flex-direction: column; /* Adjust direction to column for mobile */
-        align-items: center; /* Center items */
+        padding-top: 80px;
+        flex-direction: column;
+        align-items: center;
     }
 
     nav {
         flex-direction: column;
-        align-items: center; /* Center items in nav */
+        align-items: center;
     }
 
     nav img {
         width: 150px;
-        margin-bottom: 20px;
-        position: relative;
-        top: 20; /* Remove top positioning */
-        left: 0; /* Remove left positioning */
-        transform: none; /* Remove transform */
+        margin-bottom: 15px;
+        position: static; /* Change from relative to static */
     }
 
     .text-box {
@@ -250,44 +249,63 @@ nav .fa-solid {
 /* Additional adjustments for very small screens */
 @media (max-width: 375px) {
     .header {
-        padding-top: 140px; /* Further increased padding for smaller screens */
+        padding-top: 60px; /* Further reduced from 100px */
     }
 
     nav img {
         width: 120px;
-        top: 60px; /* Adjust for smaller screens */
+        margin-bottom: 10px;
+    }
+
+    .text-box {
+        top: 45%; /* Further adjusted from 55% */
     }
 
     .text-box h1 {
-        font-size: 28px;
+        font-size: 22px; /* Slightly smaller */
+        margin-bottom: 10px; /* Reduced margin */
     }
 
     .text-box p {
         font-size: 12px;
+        margin-bottom: 15px; /* Reduced margin */
+    }
+
+    .hero-btn {
+        font-size: 11px;
+        padding: 8px 20px;
     }
 }
 
-
-/* Additional adjustments for very small screens */
-@media (max-width: 375px) {
+/* New media query for extra small screens */
+@media (max-width: 320px) {
     .header {
-        padding-top: 140px; /* Further increased padding for smaller screens */
+        padding-top: 50px;
     }
 
     nav img {
-        width: 120px;
-        top: 90px; /* Adjust for smaller screens */
+        width: 100px;
+        margin-bottom: 5px;
+    }
+
+    .text-box {
+        top: 40%;
     }
 
     .text-box h1 {
-        font-size: 28px;
+        font-size: 20px;
     }
 
     .text-box p {
-        font-size: 12px;
+        font-size: 11px;
+        margin-bottom: 10px;
+    }
+
+    .hero-btn {
+        font-size: 10px;
+        padding: 6px 15px;
     }
 }
-
 
 /* USLUGE 1 - index.html */
 
