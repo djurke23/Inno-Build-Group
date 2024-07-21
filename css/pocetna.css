@@ -2313,41 +2313,6 @@ p {
         padding: 10px;
     }
 
-    /* Zaglavlje */
-    .header {
-        min-height: 50vh;
-    }
-
-    .text-box h1 {
-        font-size: 30px;
-    }
-
-    .nav-links ul li {
-        display: block;
-        padding: 5px;
-    }
-
-    .nav-links {
-        position: fixed;
-        background: #f44336;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 2;
-        transition: 0.5s;
-    }
-
-    /* Info bar */
-    .info-bar {
-        flex-direction: column;
-        padding: 5px 0;
-    }
-
-    .info-item {
-        margin: 5px 0;
-    }
 
     /* Usluge */
     .red {
@@ -2451,9 +2416,6 @@ p {
         font-size: 16px;
     }
 
-    .text-box h1 {
-        font-size: 36px;
-    }
 
     .gallery, .gallery2 {
         grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
