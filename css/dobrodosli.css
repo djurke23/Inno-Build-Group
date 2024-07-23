@@ -1,0 +1,60 @@
+/* blog.css */
+
+.blog-content-d {
+    max-width: 900px; /* Prilagodi širinu po potrebi */
+    margin: 0 auto;
+    padding: 20px;
+    color: black;
+}
+
+.blog-post-d {
+    background-color: #fff; /* Bela pozadina */
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 8px; /* Zaobljeni uglovi */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Lagana senka */
+}
+
+
+.post-title-d {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333; /* Tamno siva boja teksta */
+}
+
+.post-date {
+    font-size: 14px;
+    color: #777; /* Svetlo siva boja */
+    margin-bottom: 20px;
+}
+
+.post-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #007bff; /* Plava boja dugmeta */
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #0056b3; /* Tamnija plava pri lebdenju */
+}
+
+/* Dodatni stilovi za liste, paragrafe itd. */
+.blog-post-d ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.blog-post-d p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
