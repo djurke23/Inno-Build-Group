@@ -272,6 +272,30 @@ const slider = document.querySelector('.slider');
         //      });
 
 
+
+
+
+
+        // poziv
+
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const poziv = document.querySelector('.poziv');
+            const btn = document.querySelector('.hero-btn');
+
+            btn.addEventListener('mouseover', function() {
+                poziv.style.boxShadow = '0 5px 15px rgba(0,0,0,0.3)';
+            });
+
+            btn.addEventListener('mouseout', function() {
+                poziv.style.boxShadow = 'none';
+            });
+        });
+
+
+
+        
         //newsletter
 
         document.querySelector('form').addEventListener('submit', function(e) {

@@ -1,10 +1,8 @@
-
 // LOADING SCREEN - sve stranice
 
 $(window).on("load",function(){
     $(".loader-wrapper").fadeOut("slow");
 }); 
-
 
 
 
@@ -37,6 +35,8 @@ function scrollToTop() {
 }
 
 
+
+
 // ikonice za nav bar fon
 document.addEventListener('DOMContentLoaded', function() {
     var navLinks = document.getElementById("navLinks");
@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if(openMenuBtn) openMenuBtn.addEventListener('click', showMenu);
     if(closeMenuBtn) closeMenuBtn.addEventListener('click', hideMenu);
 });
+
 
 //newsletter
 

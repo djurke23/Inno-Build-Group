@@ -85,3 +85,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if(openMenuBtn) openMenuBtn.addEventListener('click', showMenu);
     if(closeMenuBtn) closeMenuBtn.addEventListener('click', hideMenu);
 });
+
+
+
+//newsletter
+
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Hvala na pretplati!');
+});

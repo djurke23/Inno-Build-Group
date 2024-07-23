@@ -35,3 +35,11 @@ function scrollToTop() {
         window.scrollTo(0, currentPosition - currentPosition / 8);
     }
 }
+
+
+//newsletter
+
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Hvala na pretplati!');
+});
