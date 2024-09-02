@@ -37,7 +37,7 @@
 
 .cta-button {
     display: inline-block;
-    background-color: #007bff; /* Plava boja dugmeta */
+    background-color: #f44336; /* Plava boja dugmeta */
     color: #fff;
     padding: 10px 20px;
     text-decoration: none;
@@ -45,7 +45,7 @@
 }
 
 .cta-button:hover {
-    background-color: #0056b3; /* Tamnija plava pri lebdenju */
+    background-color: #911e1e; /* Tamnija plava pri lebdenju */
 }
 
 /* Dodatni stilovi za liste, paragrafe itd. */
@@ -58,3 +58,7 @@
     line-height: 1.6;
     margin-bottom: 15px;
 }
+
+
+
+

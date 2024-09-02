@@ -1500,3 +1500,48 @@ padding-top: 50px;
       grid-template-columns: repeat(2, 1fr);
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+.video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Razmak između video snimaka */
+  justify-content: space-between;
+}
+
+.video-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.video-item::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%; /* Odnos širine i visine 16:9, prilagodi prema potrebi */
+}
+
+.video-item video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Podesi prema potrebi: contain, cover */
+}
+
+
+
+@media (max-width: 768px) {
+  .video-item {
+    flex: 1 1 100%; /* Svaki video snimak zauzima 100% širine na manjim ekranima */
+  }
+}
