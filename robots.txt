@@ -1,0 +1,25 @@
+# robots.txt za www.vas-sajt.com
+# Dozvoli svim robotima da indeksiraju sve stranice
+User-agent: *
+Allow: /
+
+# Blokiraj pristup direktorijumu "privatni"
+User-agent: *
+Disallow: /privatni/
+
+# Blokiraj pristup specifičnim stranicama
+User-agent: *
+Disallow: /stranica1.html
+Disallow: /stranica2.html
+
+# Dozvoli pristup samo Googlebot-u
+User-agent: Googlebot
+Allow: /
+
+# Blokiraj pristup Bingbot-u
+User-agent: Bingbot 
+Disallow: /
+
+# Blokiraj pristup lošem robotu
+User-agent: BadBot
+Disallow: /

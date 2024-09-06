@@ -1,0 +1,11 @@
+# ads.txt for www.vas-sajt.com
+# Authorized Digital Sellers
+
+# Direktni prodavci
+example-seller.com, 12345, DIRECT
+
+# Reseleri
+example-reseller.com, 67890, RESELLER
+
+# Dodajte više prodavaca ili reselera po potrebi
+another-seller.com, 54321, DIRECT
